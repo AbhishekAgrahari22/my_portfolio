@@ -1,0 +1,29 @@
+@keyframes dotRain {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.rainy-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.rainy-dots .dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #60a5fa;
+  border-radius: 50%;
+  animation: dotRain linear infinite;
+}
